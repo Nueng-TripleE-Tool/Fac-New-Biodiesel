@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fac. New Biodiesel — ISO 50001 Energy Tools · Triple E Technology</title>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+:root{--primary:#1a5276;--bg:#f0f4f8;--card-bg:#fff;--text:#2c3e50;--subtext:#7f8c8d;--gold:#d4ac0d;
+--enms-dark:#0f2a4a;--enms-mid:#12a4a4;--enms-light:#e0f5f5;--enms-text:#0b5e5e;
+--ghg-dark:#145a32;--ghg-mid:#1d8348;--ghg-light:#d5f5e3;--ghg-text:#145a32;
+--thermal-dark:#921212;--thermal-mid:#e53935;--thermal-light:#ffebee;--thermal-text:#b71c1c;
+--book-dark:#4e342e;--book-mid:#8d6e63;--book-light:#efebe9;--book-text:#4e342e;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Sarabun',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+header{background:linear-gradient(135deg,#0d3b5e 0%,#1a5276 55%,#0e6655 100%);color:#fff;padding:40px 24px 52px;text-align:center;position:relative;overflow:hidden}
+header::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.logo-line{font-size:.85rem;opacity:.75;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;position:relative}
+header h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:700;margin-bottom:8px;position:relative}
+header p{font-size:1rem;opacity:.85;max-width:680px;margin:0 auto;position:relative}
+.stats-bar{background:#fff;border-bottom:1px solid #e0e8f0;padding:12px 24px;display:flex;justify-content:center;gap:40px;flex-wrap:wrap;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.stat-item{display:flex;align-items:center;gap:8px;font-size:.9rem;color:var(--subtext)}
+.stat-item strong{color:var(--primary);font-size:1.1rem}.stat-item i{color:#1d8348}
+main{max-width:1160px;margin:0 auto;padding:36px 20px 64px}
+.group-block{margin-bottom:48px}
+.group-header{display:flex;align-items:center;gap:14px;padding:14px 20px;border-radius:10px 10px 0 0}
+.group-header.enms{background:linear-gradient(90deg,var(--enms-dark),var(--enms-mid))}
+.group-header.ghg{background:linear-gradient(90deg,var(--ghg-dark),var(--ghg-mid))}
+.group-header.book{background:linear-gradient(90deg,var(--book-dark),var(--book-mid))}
+.group-header .gh-icon{width:40px;height:40px;border-radius:8px;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:1.25rem;color:#fff;flex-shrink:0}
+.group-header .gh-text h2{font-size:1.05rem;font-weight:700;color:#fff}
+.group-header .gh-text p{font-size:.78rem;color:rgba(255,255,255,.8);margin-top:1px}
+.group-header .gh-count{margin-left:auto;background:rgba(255,255,255,.25);color:#fff;font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:20px}
+.group-body{background:#fff;border:1px solid #dde6ef;border-top:none;border-radius:0 0 10px 10px;padding:20px}
+.group-body.enms{border-color:var(--enms-mid)}.group-body.ghg{border-color:var(--ghg-mid)}.group-body.book{border-color:var(--book-mid)}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.tool-card{background:var(--card-bg);border-radius:10px;border:1px solid #e8eef5;box-shadow:0 2px 8px rgba(0,0,0,.05);transition:transform .2s,box-shadow .2s;overflow:hidden;display:flex;flex-direction:column}
+.tool-card:hover{transform:translateY(-4px);box-shadow:0 8px 22px rgba(0,0,0,.11)}
+.card-top{color:#fff;padding:16px 18px;display:flex;align-items:center;gap:12px}
+.card-top.enms{background:linear-gradient(135deg,var(--enms-dark),var(--enms-mid))}
+.card-top.ghg{background:linear-gradient(135deg,var(--ghg-dark),var(--ghg-mid))}
+.card-top.book{background:linear-gradient(135deg,var(--book-dark),var(--book-mid))}
+.card-icon{width:44px;height:44px;background:rgba(255,255,255,.2);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.card-top h3{font-size:.95rem;font-weight:700;margin-bottom:2px}.card-top .card-subtitle{font-size:.75rem;opacity:.85}
+.card-body{padding:16px 18px;flex:1;display:flex;flex-direction:column}
+.card-desc{font-size:.86rem;color:var(--subtext);line-height:1.6;flex:1;margin-bottom:14px}
+.card-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px}
+.tag{font-size:.71rem;padding:2px 8px;border-radius:20px;background:#eaf2fb;color:var(--primary);font-weight:600}
+.tag.enms{background:var(--enms-light);color:var(--enms-text)}.tag.ghg{background:var(--ghg-light);color:var(--ghg-text)}.tag.book{background:var(--book-light);color:var(--book-text)}
+.tag.standard{background:#eafaf1;color:#1d8348}
+.card-footer{display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid #eef2f7}
+.ver{font-size:.78rem;color:var(--subtext)}.ver b{color:var(--primary)}
+.btn-open{display:inline-flex;align-items:center;gap:6px;color:#fff;padding:7px 16px;border-radius:20px;text-decoration:none;font-size:.82rem;font-weight:600;transition:filter .2s,transform .1s}
+.btn-open:hover{filter:brightness(1.12);transform:scale(1.03)}
+.btn-open.enms{background:var(--enms-mid)}.btn-open.ghg{background:var(--ghg-mid)}.btn-open.book{background:var(--book-mid)}
+.tool-card.coming-soon{opacity:.6}.tool-card.coming-soon .btn-open{background:var(--subtext);pointer-events:none}
+.badge-soon{background:var(--gold);color:#333;font-size:.63rem;padding:2px 7px;border-radius:10px;font-weight:700;margin-left:7px;vertical-align:middle}
+.info-box{background:#fff;border:1px solid #dde6ef;border-radius:12px;padding:22px 26px;margin-top:8px}
+.info-box h3{color:var(--primary);font-size:1rem;margin-bottom:12px}
+.info-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin-top:14px}
+.info-item{display:flex;align-items:flex-start;gap:10px}.info-item i{margin-top:3px;color:#1d8348;width:16px}
+.info-item div{font-size:.84rem;line-height:1.5}.info-item strong{color:var(--text)}
+footer{text-align:center;padding:22px;font-size:.8rem;color:var(--subtext);border-top:1px solid #dde6ef;background:#fff}
+footer strong{color:var(--primary)}
+@media (max-width:600px){.stats-bar{gap:18px}header{padding:26px 14px 34px}.group-body{padding:14px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo-line"><i class="fas fa-bolt"></i> Triple E Technology Co., Ltd.</div>
+  <h1><i class="fas fa-industry"></i> Fac. New Biodiesel — Energy Tools</h1>
+  <p>เครื่องมือประกอบระบบการจัดการพลังงาน ISO 50001:2018 ของบริษัท นิว ไบโอดีเซล จำกัด — เส้นฐานพลังงาน (EnB) · EnPI · การจำลองพลังงานตามแผนผลิต</p>
+</header>
+
+<div class="stats-bar">
+  <div class="stat-item"><i class="fas fa-tools"></i><span>เครื่องมือทั้งหมด: <strong id="total-tools">1</strong> รายการ</span></div>
+  <div class="stat-item"><i class="fas fa-file-alt"></i><span>อ้างอิง: <strong>รายงาน Rev.1 · ก.ย. 2569</strong></span></div>
+  <div class="stat-item"><i class="fas fa-calendar-alt"></i><span>อัปเดตล่าสุด: <strong id="last-update">24 ก.ย. 2569</strong></span></div>
+</div>
+
+<main>
+
+<!-- กลุ่มที่ 1 : EnMS ISO 50001 -->
+<div class="group-block">
+  <div class="group-header enms">
+    <div class="gh-icon"><i class="fas fa-chart-line"></i></div>
+    <div class="gh-text">
+      <h2>EnMS — ISO 50001 Energy Baseline &amp; Simulation</h2>
+      <p>สมการ EnB รายกระบวนการ · จำลองพลังงานจากแผนผลิต · EnPI · CUSUM</p>
+    </div>
+    <span class="gh-count">1 Tool</span>
+  </div>
+  <div class="group-body enms">
+    <div class="tools-grid">
+
+      <!-- NewBio EnB Production–Energy Simulator -->
+      <div class="tool-card">
+        <div class="card-top enms">
+          <div class="card-icon"><i class="fas fa-sliders-h"></i></div>
+          <div>
+            <h3>EnB Production–Energy Simulator</h3>
+            <div class="card-subtitle">จำลองพลังงานรายกระบวนการจากแผนการผลิต v1.0</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <p class="card-desc">
+            กรอกแผนผลิตครั้งเดียว (FFB, โรงกลั่น 1/2, Dry Fractionation, Bio3, โรงบรรจุ, โครงการ CPO Washing และส่วนขยาย)
+            แล้วคำนวณ<b>ไฟฟ้า · ความร้อน · พลังงานรวม · SEC</b> ของทุกกระบวนการจากสมการ EnB ส่วนที่ 1B
+            พร้อมสมดุลไฟฟ้าก๊าซชีวภาพ ตันชีวมวล ต้นทุน GHG ผังการไหล และเทียบกับค่าเฉลี่ยช่วงข้อมูลจริง
+          </p>
+          <div class="card-tags">
+            <span class="tag standard">ISO 50001</span>
+            <span class="tag enms">EnB</span>
+            <span class="tag enms">SEC</span>
+            <span class="tag enms">Predictive EnB</span>
+            <span class="tag">Biogas</span>
+            <span class="tag">JSON Save/Load</span>
+          </div>
+          <div class="card-footer">
+            <div class="ver"><i class="fas fa-code-branch"></i> เวอร์ชัน <b>1.0</b> · 24 ก.ย. 2569</div>
+            <a href="tools/Tool_NewBio_EnB_Production_Simulator.html" class="btn-open enms"><i class="fas fa-calculator"></i> เปิดใช้งาน</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- กลุ่มที่ 2 : เครื่องมือกลางที่ใช้ร่วม -->
+<div class="group-block">
+  <div class="group-header ghg">
+    <div class="gh-icon"><i class="fas fa-link"></i></div>
+    <div class="gh-text">
+      <h2>Shared Tools — เครื่องมือกลางจาก energy-tools ที่ใช้ในโครงการนี้</h2>
+      <p>สร้างสมการ EnB · ประสิทธิภาพหม้อไอน้ำ · ก๊าซชีวภาพ</p>
+    </div>
+    <span class="gh-count">3 Links</span>
+  </div>
+  <div class="group-body ghg">
+    <div class="tools-grid">
+      <div class="tool-card">
+        <div class="card-top ghg"><div class="card-icon"><i class="fas fa-chart-bar"></i></div><div><h3>MLR &amp; CUSUM Dashboard</h3><div class="card-subtitle">ส่วนที่ 1B Multi-Stream — ที่มาของสมการ EnB</div></div></div>
+        <div class="card-body"><p class="card-desc">ใช้สร้างสมการ EnB ไฟฟ้า/ความร้อน/รวมของทุกกระบวนการย่อย และติดตาม CUSUM รายเดือน ไฟล์ข้อมูลนำเข้าอยู่ใน <code>EnB_ToolInputs</code></p>
+          <div class="card-tags"><span class="tag standard">ISO 50001</span><span class="tag ghg">MLR</span><span class="tag ghg">CUSUM</span></div>
+          <div class="card-footer"><div class="ver">energy-tools</div><a href="https://nueng-triplee-tool.github.io/energy-tools/tools/EnMS_MLR_CUSUM_Dashboard.html" class="btn-open ghg" target="_blank"><i class="fas fa-external-link-alt"></i> เปิด</a></div></div>
+      </div>
+      <div class="tool-card">
+        <div class="card-top ghg"><div class="card-icon"><i class="fas fa-temperature-high"></i></div><div><h3>Boiler Efficiency Calculator</h3><div class="card-subtitle">BS 845-1 · F* ทำนายเชื้อเพลิงหม้อ 28/55 t/h</div></div></div>
+        <div class="card-body"><p class="card-desc">ประสิทธิภาพหม้อไอน้ำชีวมวล 20/25/30/35 t/h และ EnB ทำนายของหม้อชุดใหม่ (ไฟล์ BoilerCalc_Input_*.json)</p>
+          <div class="card-tags"><span class="tag standard">BS 845-1</span><span class="tag ghg">HHV</span><span class="tag">BHP</span></div>
+          <div class="card-footer"><div class="ver">energy-tools</div><a href="https://nueng-triplee-tool.github.io/energy-tools/tools/EnPI_Boiler_Efficiency_Calculator.html" class="btn-open ghg" target="_blank"><i class="fas fa-external-link-alt"></i> เปิด</a></div></div>
+      </div>
+      <div class="tool-card">
+        <div class="card-top ghg"><div class="card-icon"><i class="fas fa-fire-alt"></i></div><div><h3>Biogas &amp; Power Gen Audit</h3><div class="card-subtitle">ระบบผลิตไฟฟ้าก๊าซชีวภาพ EC_05</div></div></div>
+        <div class="card-body"><p class="card-desc">ตรวจวัดเครื่องยนต์ก๊าซ GEN 1–6, kWh/Nm³ และศักยภาพ WHR จากไอเสีย</p>
+          <div class="card-tags"><span class="tag ghg">Biogas</span><span class="tag">Gas Engine</span><span class="tag">CHP</span></div>
+          <div class="card-footer"><div class="ver">energy-tools</div><a href="https://nueng-triplee-tool.github.io/energy-tools/tools/Tool_Biogas_PowerGen.html" class="btn-open ghg" target="_blank"><i class="fas fa-external-link-alt"></i> เปิด</a></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="info-box">
+  <h3><i class="fas fa-info-circle"></i> เกี่ยวกับโครงการ</h3>
+  <div class="info-grid">
+    <div class="info-item"><i class="fas fa-industry"></i><div><strong>โรงงาน</strong><br>บริษัท นิว ไบโอดีเซล จำกัด — โรงสกัด · โรงกลั่น 1–2 · Dry Fractionation · ไบโอดีเซล · โรงบรรจุ · หม้อไอน้ำชีวมวล · ก๊าซชีวภาพ 4.5 MW</div></div>
+    <div class="info-item"><i class="fas fa-file-alt"></i><div><strong>เอกสารอ้างอิง</strong><br>รายงานประเมินสมรรถนะเครื่องจักรและเส้นฐานพลังงาน ISO 50001 ปี 2569 Rev.1 (ก.ย. 2569)</div></div>
+    <div class="info-item"><i class="fas fa-database"></i><div><strong>ข้อมูล</strong><br>NBD-* รายเดือนปี 2568 · โรงสกัดรายวัน ก.ค.–ส.ค. 2569 · ก๊าซชีวภาพรายวัน ส.ค. 2569</div></div>
+    <div class="info-item"><i class="fas fa-exclamation-triangle"></i><div><strong>ข้อจำกัด</strong><br>สมการอิงข้อมูลของโรงงานนี้เท่านั้น ใช้ได้ในช่วงข้อมูลที่สร้างสมการ ห้ามนำไปใช้กับโรงงานอื่น</div></div>
+  </div>
+</div>
+
+</main>
+<footer><strong>Triple E Technology Co., Ltd.</strong> · Fac. New Biodiesel — ISO 50001 Energy Tools · จัดทำโดย อ.หนึ่ง กลับทวี</footer>
+</body>
+</html>
